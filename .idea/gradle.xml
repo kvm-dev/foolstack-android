@@ -16,8 +16,6 @@
             <option value="$PROJECT_DIR$/base/local" />
             <option value="$PROJECT_DIR$/base/navigation" />
             <option value="$PROJECT_DIR$/base/network" />
-            <option value="$PROJECT_DIR$/base/network/api" />
-            <option value="$PROJECT_DIR$/base/network/data" />
             <option value="$PROJECT_DIR$/base/storage" />
             <option value="$PROJECT_DIR$/base/ui" />
             <option value="$PROJECT_DIR$/base/utils" />
