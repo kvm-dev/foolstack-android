@@ -56,4 +56,5 @@ dependencies {
     //project
     implementation(project(":base:viewModel"))
     implementation(project(":base:ui"))
+    implementation(project(":base:network"))
 }

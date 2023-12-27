@@ -5,5 +5,6 @@ import ru.local.viewmodel.BaseViewModel
 class SplashViewModel(private val interactor: SplashInteractor): BaseViewModel() {
     fun superTest() = 25
     fun getLocal() = interactor.getLocal()
+    fun getNetworkStatus() = interactor.getNetworkStatus()
 
 }

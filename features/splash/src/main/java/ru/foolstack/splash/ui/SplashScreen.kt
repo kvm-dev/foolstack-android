@@ -52,6 +52,7 @@ fun SplashScreen(onClick: () -> Unit, splashViewModel: SplashViewModel = koinVie
         BottomSplashScreen(bitmap, onClick, onClick)
         }
     }
+    Log.d("что с коннектом", "${splashViewModel.getNetworkStatus()}")
     Log.d("что там", "${splashViewModel.getLocal()}")
 //    val (isVisible, setVisible) = remember { mutableStateOf(true) }
 //    SimpleSnackbar(isVisible = isVisible, message = "Jetpack Compose Snackbar Demo")
