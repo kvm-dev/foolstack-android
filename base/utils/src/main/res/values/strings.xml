@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="message_error_unknown">Неизвестная ошибка</string>
+    <string name="message_error_unknown_description">Не удалось определить тип ошибки</string>
+    <string name="message_error_connect">Ошибка соединения</string>
+    <string name="message_error_connect_description">Отсутствует соединение с интернетом</string>
+    <string name="message_error_socket">Ошибка сокета</string>
+    <string name="message_error_socket_description">Ошибка при работе с сервером</string>
+    <string name="message_error_client_login_validation_error">Указан некорректный логин пользователя</string>
+    <string name="message_error_client_blocked">Пользователь заблокирован</string>
+    <string name="message_error_invalid_login_or_password">Неверно указан логин или пароль пользователя</string>
+    <string name="message_error_client_not_found">Пользователь не найден</string>
+</resources>
