@@ -2,6 +2,7 @@
 plugins {
     alias(libs.plugins.com.android.library)
     alias(libs.plugins.org.jetbrains.kotlin.android)
+    alias(libs.plugins.sql.delight.gradle.plugin)
 }
 
 android {
@@ -39,15 +40,27 @@ android {
     }
 }
 
+sqldelight {
+    databases {
+        create("Database") {
+            packageName.set("ru.foolstack")
+        }
+    }
+}
+
 dependencies {
+    implementation(libs.activity.compose)
     implementation(libs.core.ktx)
     implementation(platform(libs.compose.bom))
     implementation(libs.appcompat)
-    implementation(platform(libs.compose.bom))
+    implementation(libs.compose.vm)
     implementation(libs.ui)
     implementation(libs.ui.graphics)
-    implementation(libs.material)
-    implementation(libs.material3)
+    implementation(libs.koin.android)
+    implementation(libs.koin.compose)
+    implementation(libs.sql.delight.android.driver)
+    implementation(libs.sql.delight.coroutines.ext)
+    implementation(libs.androidx.foundation.layout.android)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)

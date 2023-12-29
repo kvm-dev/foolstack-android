@@ -43,6 +43,7 @@ dependencies {
     implementation(libs.core.ktx)
     implementation(platform(libs.compose.bom))
     implementation(libs.appcompat)
+    implementation(platform(libs.compose.bom))
     implementation(libs.compose.vm)
     implementation(libs.ui)
     implementation(libs.ui.graphics)
@@ -53,4 +54,5 @@ dependencies {
     //project
     implementation(project(":base:viewModel"))
     implementation(project(":base:ui"))
+    implementation(project(":base:viewModel"))
 }

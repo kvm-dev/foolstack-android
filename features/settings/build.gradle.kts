@@ -44,12 +44,15 @@ dependencies {
     implementation(platform(libs.compose.bom))
     implementation(libs.appcompat)
     implementation(platform(libs.compose.bom))
+    implementation(libs.compose.vm)
     implementation(libs.ui)
     implementation(libs.ui.graphics)
+    implementation(libs.androidx.foundation.layout.android)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
     //project
     implementation(project(":base:viewModel"))
     implementation(project(":base:ui"))
+    implementation(project(":base:viewModel"))
 }

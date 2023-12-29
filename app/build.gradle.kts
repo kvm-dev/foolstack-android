@@ -62,6 +62,8 @@ dependencies {
     implementation(libs.koin.android)
     implementation(libs.koin.core)
     implementation(libs.koin.compose)
+    implementation(libs.sql.delight.android.driver)
+    implementation(libs.sql.delight.coroutines.ext)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
@@ -76,3 +78,4 @@ dependencies {
     implementation(project(":features:auth"))
     implementation(project(":features:profile"))
 }
+

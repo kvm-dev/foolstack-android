@@ -16,6 +16,7 @@ ktor = "2.2.3"
 koin = "3.5.2-RC1"
 compose =  "1.5.4"
 compose-viewmodel = "2.6.1"
+sql-delight = "2.0.1"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -54,11 +55,14 @@ koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = 
 koin-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version.ref = "koin"}
 koin-test = { group = "io.insert-koin", name = "koin-test", version.ref = "koin"}
 koin-junit = { group = "io.insert-koin", name = "koin-test-junit4", version.ref = "koin"}
+sql-delight-android-driver = { group = "app.cash.sqldelight", name = "android-driver", version.ref = "sql-delight" }
+sql-delight-coroutines-ext = { group = "app.cash.sqldelight", name = "coroutines-extensions", version.ref = "sql-delight"}
 
 [plugins]
 com-android-application = { id = "com.android.application", version.ref = "agp" }
 org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "org-jetbrains-kotlin-android" }
 com-android-library = { id = "com.android.library", version.ref = "agp" }
+sql-delight-gradle-plugin = { id = "app.cash.sqldelight", version.ref = "sql-delight"}
 
 [bundles]
 

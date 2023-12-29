@@ -4,6 +4,8 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.graphics.ImageBitmap
@@ -11,9 +13,9 @@ import androidx.compose.ui.res.imageResource
 import org.koin.androidx.compose.koinViewModel
 import ru.foolstack.splash.R
 import ru.foolstack.splash.viewModel.SplashViewModel
-import ru.local.ui.components.BigAppTitle
-import ru.local.ui.components.BottomSplashScreen
-import ru.local.ui.components.SplashBackground
+import ru.foolstack.ui.components.BigAppTitle
+import ru.foolstack.ui.components.BottomSplashScreen
+import ru.foolstack.ui.components.SplashBackground
 
 //@Composable
 //fun SplashScreen(onClick: () -> Unit, splashViewModel:  SplashViewModel = viewModel()) {
@@ -52,8 +54,17 @@ fun SplashScreen(onClick: () -> Unit, splashViewModel: SplashViewModel = koinVie
         BottomSplashScreen(bitmap, onClick, onClick)
         }
     }
-    Log.d("что с коннектом", "${splashViewModel.getNetworkStatus()}")
-    Log.d("что там", "${splashViewModel.getLocal()}")
+    splashViewModel.checkConnection()
+    val connectionStatus by splashViewModel.connectionState.collectAsState()
+    when(connectionStatus){
+        ViewState.ConnectionState.CONNECTED ->{
+            Log.d("соединение", "есть")
+        }
+        ViewState.ConnectionState.DISCONNECTED ->{
+            Log.d("соединения", "нет")
+        }
+    }
+
 //    val (isVisible, setVisible) = remember { mutableStateOf(true) }
 //    SimpleSnackbar(isVisible = isVisible, message = "Jetpack Compose Snackbar Demo")
     //https://androidwave.com/how-to-create-the-snackbar-in-jetpack-compose/

@@ -1,4 +1,4 @@
-package ru.local.splash
+package ru.foolstack.splash
 
 import org.junit.Test
 

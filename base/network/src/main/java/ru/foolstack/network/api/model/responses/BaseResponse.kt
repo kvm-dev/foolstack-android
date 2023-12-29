@@ -1,7 +1,7 @@
 package ru.foolstack.network.api.model.responses
 
 import kotlinx.serialization.SerialName
-import ru.local.utils.mappers.DataTransferObject
+import ru.foolstack.utils.mappers.DataTransferObject
 
 open class BaseResponse(
     @SerialName("message") var message: String? = null,
